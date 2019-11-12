@@ -1,5 +1,9 @@
-const express = require('express');
-const routes = require('./routes');
+// const express = require('express');
+// const routes = require('./routes');
+
+//usando o sucrase podemos utilisar:
+import express from 'express';
+import routes from './routes';
 
 class App {
   constructor(){
@@ -18,4 +22,7 @@ class App {
   }
 }
 
-module.exports = new App().server;
+// module.exports = new App().server;
+
+//usando o sucrase podemos utilisar:
+export default new App().server;

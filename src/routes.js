@@ -1,4 +1,7 @@
-const {Router} = require('express');
+// const {Router} = require('express');
+
+//usando o sucrase podemos utilisar:
+import {Router} from 'express';
 
 const routes = new Router();
 
@@ -6,4 +9,8 @@ routes.get('/', (req,res)=>{
   return res.json({message:'Word'})
 })
 
-module.exports = routes
+
+// module.exports = routes
+
+//usando o sucrase podemos utilisar:
+export default routes;
