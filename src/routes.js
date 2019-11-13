@@ -1,16 +1,13 @@
 // const {Router} = require('express');
 
-//usando o sucrase podemos utilisar:
-import {Router} from 'express';
+// usando o sucrase podemos utilisar:
+import { Router } from 'express';
 
 const routes = new Router();
 
-routes.get('/', (req,res)=>{
-  return res.json({message:'hello World'})
-})
-
+routes.get('/', (req, res) => res.json({ message: 'hello World' }));
 
 // module.exports = routes
 
-//usando o sucrase podemos utilisar:
+// usando o sucrase podemos utilisar:
 export default routes;
