@@ -2,11 +2,11 @@
 
 // usando o sucrase podemos utilisar:
 import { Router } from 'express';
+import UserController from './app/controllers/UserController';
 
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ message: 'hello World' }));
-
+routes.post('/users', UserController.store);
 // module.exports = routes
 
 // usando o sucrase podemos utilisar:
