@@ -19,7 +19,7 @@ class SessionController {
         name,
         email,
       },
-      // token gerado pelo http://www.md5online.org
+
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       }),
