@@ -5,6 +5,12 @@ import { extname, resolve } from 'path';
 export default {
   storage: multer.diskStorage({
     destination: resolve(__dirname, '..', '..', 'tmp', 'uploads'),
-    filename: (req, file, cd) => {},
+    filename: (req, file, cd) => {
+      crypto.randomBytes(16,(err, res)=>{
+        if (err) return cb(err);
+
+        return cb(null, res.toStrings('hex') + extname(file.originalname));
+      })
+    },
   }),
 };
